@@ -5,18 +5,21 @@ except ImportError:
 
 import beedb
 
-setup(
+requirements = open('./requirements.txt').read(),
+
+setuptools.setup(
     name='beedb',
-    version=beedb.__version__,
+    version='0.0.1pre-alpha',
     url='http://github.com/soltysh/beedb/',
     license=open('./LICENSE').read(),
     author='Maciej Szulik',
     author_email='soltysh@gmail.com',
-    description='Engine that allows creating small, configurable databases'.
+    description='Engine that allows creating small, configurable databases',
     long_description=open('./README.md').read(),
     packages=['beedb'],
     platforms='any',
-    install_requires=open('./requirements.txt').read(),
+    install_requires=requirements,
+    tests_require=requirements,
     classifiers=[
         'Development Status :: 1 - Alpha',
         'Programming Language :: Python :: 2.7',
