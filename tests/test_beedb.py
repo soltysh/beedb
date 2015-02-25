@@ -27,11 +27,11 @@ class TestBeeDB(unittest.TestCase):
     def test_get_data(self):
         db = BeeDB('user', 'database')
         id = db.save(('name1', 'value1'), ('name2', 'value2'))
-        db.get('id')
+        db.get(id)
 
     def test_delete_data(self):
         db = BeeDB('user', 'database')
-        db.delete('id')
+        db.delete(id)
 
     def test_search_data(self):
         db = BeeDB('user', 'database')
